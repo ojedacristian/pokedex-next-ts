@@ -1,56 +1,68 @@
 import type { NextPage } from 'next'
-import {Box, Flex, Text, Container} from '@chakra-ui/react'
+import { Box, Flex, Text, Heading, Container } from '@chakra-ui/react'
 import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
     <Box
-      backgroundColor='purple.700'
+      backgroundColor='yellow.300'
       width='100vw'
       height='100vh'
     >
-      <Box 
-      display='flex'
-      position='absolute'
-      justifyContent='center'
-      alignItems='center'
-      height='100%'
-      width='100%'
-      paddingTop='12em'
+      <Box
+        display='flex'
+        position='absolute'
+        justifyContent='center'
+        alignItems='flex-end'
+        height='100%'
+        width='100%'
       >
         <Text
-          opacity='50%'
-          fontSize='9xl'
-          fontWeight='semibold'
+          opacity='20%'
+          fontSize='300px'
         >
           PIKACHU
         </Text>
       </Box>
       <Container
-        maxWidth='container.lg'
+        maxWidth='container.xl'
+        padding='1em'
       >
 
-      <Box 
-        display='flex'
-        alignItems='center'
-        justifyContent='space-between'
-        color='white'
-        width='100%'
-        fontSize='6xl'
-        paddingTop='1em'
+        <Box
+          display='flex'
+          alignItems='center'
+          justifyContent='space-between'
+          color='white'
+          width='100%'
+          fontSize='6xl'
+          paddingTop='1em'
         >
-        <Text>#025</Text>
-        <Text>PIKACHU</Text>
-      </Box>
-      <Box
-        display='flex'
-        justifyContent='center'
-      width='100%'>
-        <Image src='/image1.png' alt=''
-          width='475px'
-          height='475px'
-        />
-      </Box>
+          <Box
+            display='flex'
+            alignItems='center'
+          >
+            <Text>#</Text>
+            <Heading fontSize='70px' as='h1' fontWeight='regular'
+              style={{
+                WebkitTextFillColor: 'transparent',
+                WebkitTextStroke: '1px'
+              }}
+            >
+              025
+            </Heading>
+          </Box>
+          <Heading fontSize='90px' as='h1' fontWeight='regular'>PIKACHU</Heading>
+        </Box>
+        <Box
+          display='flex'
+          justifyContent='center'
+          width='100%'>
+          <Image src='/image1.png' alt=''
+            width='475px'
+            height='475px'
+          />
+        </Box>
       </Container>
     </Box>
   )
